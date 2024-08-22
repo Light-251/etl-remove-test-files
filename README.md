@@ -1,38 +1,24 @@
-# ETL Remove Test Files
+## Descrizione del Funzionamento
 
-Questo progetto Python fornisce uno script per rimuovere file con estensioni specificate da una determinata cartella. I file vengono spostati nel cestino anziché eliminati permanentemente.
+Il programma `ETL Remove Test Files` è uno script Python progettato per rimuovere file con estensioni specifiche da una cartella data. I file vengono spostati nel cestino invece di essere eliminati definitivamente.
 
-## Prerequisiti
+### Come Funziona:
 
-- Python 3.x
-- `send2trash` per spostare i file nel cestino.
+1. **Configura il Percorso e le Estensioni:**
+   Modifica il file `main.py` per impostare il percorso della cartella da cui vuoi rimuovere i file e le estensioni dei file da eliminare. Ad esempio:
+   
+   ```python
+   cartella_da_cercare = r"C:\path\to\your\folder"
+   estensioni_file = ["txt", "log", "csv"]
+2. Esecuzione dello Script:
+Esegui il comando python main.py per avviare il processo. Lo script cercherà tutti i file con le estensioni specificate nella cartella indicata e li sposterà nel cestino.
+Esempio:
+Se hai impostato cartella_da_cercare su C:\Users\tuo_nome\Desktop\prova e estensioni_file su ["txt", "log"], eseguendo lo script verranno spostati nel cestino tutti i file con estensione .txt e .log presenti in quella cartella.
 
-### Installazione delle dipendenze
+Questo approccio ti consente di gestire facilmente e in modo sicuro i file di test o temporanei senza eliminarli definitivamente.
 
-Assicurati di avere Python installato e attiva l'ambiente virtuale. Poi installa `send2trash` eseguendo il seguente comando:
+### Descrizione del Funzionamento:
+- **Configura il Percorso e le Estensioni**: Personalizza il percorso della cartella e le estensioni dei file nel file `main.py`.
+- **Esecuzione dello Script**: Avvia lo script con `python main.py` per spostare i file specificati nel cestino.
 
-```bash
-pip install send2trash
-
-Utilizzo
-Clona la repository e naviga nella cartella del progetto:
-
-
-git clone <url-repository>
-cd etl-remove-test-files
-Crea e attiva un ambiente virtuale (opzionale ma raccomandato):
-
-python -m venv venv
-source venv/bin/activate  # Su macOS/Linux
-.\venv\Scripts\activate  # Su Windows
-Installa le dipendenze:
-
-pip install -r requirements.txt
-Modifica il percorso della cartella e le estensioni dei file nel file main.py:
-
-cartella_da_cercare = r"C:\path\to\your\folder"
-estensioni_file = ["txt", "log", "csv"]  # Elenca le estensioni che vuoi rimuovere
-Esegui lo script:
-
-python main.py
-Questo sposterà i file con le estensioni specificate nel cestino.
+Questa sezione fornisce una panoramica concisa di come configurare ed eseguire il programma, rendendo più semplice il processo di utilizzo e comprensione.
