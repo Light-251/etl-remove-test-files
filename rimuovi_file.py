@@ -28,3 +28,10 @@ if __name__ == "__main__":
     estensioni_file = ["xml"]  # Elenca le estensioni che vuoi rimuovere
     
     rimuovi_file(cartella_da_cercare, estensioni_file)
+    
+    cartella_da_cercare = [
+        r"C:\Progetti\ETL\etl\workflow\out"
+    ]
+    estensioni_file = ["tar"]
+    
+    rimuovi_file(cartella_da_cercare, estensioni_file)
