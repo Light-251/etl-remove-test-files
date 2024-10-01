@@ -1,6 +1,9 @@
-import os
 import glob
-from send2trash import send2trash  # Importa send2trash per spostare i file nel cestino
+import os
+
+from send2trash import \
+    send2trash  # Importa send2trash per spostare i file nel cestino
+
 
 def rimuovi_file(cartelle, estensioni):
     for cartella in cartelle:
@@ -22,16 +25,31 @@ def rimuovi_file(cartelle, estensioni):
 if __name__ == "__main__":
     # Specifica la cartella e le estensioni dei file da rimuovere
     cartella_da_cercare = [
-        r"C:\Progetti\ETL\etl\workflow\processed",
-        r"C:\Progetti\ETL\etl\workflow\failed"
+        r"C:\Progetti\ETL_REFACTOR\etl\workflow\processed",
+        r"C:\Progetti\ETL_REFACTOR\etl\workflow\failed",
+        r"C:\Progetti\ETL_REFACTOR\etl\workflow\input\sources"
         ]
-    estensioni_file = ["xml"]  # Elenca le estensioni che vuoi rimuovere
+    estensioni_file = ["xml"]  # Elenca le estensioni che vuoi rimuovere 
     
-    rimuovi_file(cartella_da_cercare, estensioni_file)
+    rimuovi_file(cartella_da_cercare, estensioni_file) # Rimuove xml da: processed, failed, sources
     
     cartella_da_cercare = [
-        r"C:\Progetti\ETL\etl\workflow\out"
+        r"C:\Progetti\ETL_REFACTOR\etl\workflow\out"
     ]
-    estensioni_file = ["tar"]
+    estensioni_file = [
+        "ok",
+        "tar"
+        ]
     
-    rimuovi_file(cartella_da_cercare, estensioni_file)
+    rimuovi_file(cartella_da_cercare, estensioni_file) # Rimuove ok, tar da: out
+    
+    cartella_da_cercare = [
+         r"C:\Progetti\ETL_REFACTOR\etl\workflow\input"
+    ]
+    
+    estensioni_file = [
+        "ok"
+    ]
+    
+    # rimuovi_file(cartella_da_cercare, estensioni_file)
+    
