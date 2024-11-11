@@ -38,14 +38,17 @@ if __name__ == "__main__":
         "tar"
         ]
     
-    # rimuovi_file(cartella_da_cercare, estensioni_file)  # Rimuove ok, tar da: out
+    rimuovi_file(cartella_da_cercare, estensioni_file)  # Rimuove ok, tar da: out
     
     cartella_da_cercare = [
-        r"C:\Progetti\ETL\etl\workflow\input"
+        r"C:\Progetti\ETL\output\fem_etl_logs\TIXBSC\failed",
+        r"C:\Progetti\ETL\output\fem_etl_logs\TIXBSC\input",
+        r"C:\Progetti\ETL\output\fem_etl_logs\TIXBSC\out",
+        r"C:\Progetti\ETL\output\fem_etl_logs\TIXBSC\processed"
     ]
     
     estensioni_file = [
-        "ok"
+        "log"
     ]
     
     # rimuovi_file(cartella_da_cercare, estensioni_file)
